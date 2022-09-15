@@ -764,4 +764,55 @@ const mediaImpares = () => {
 }
 
 botao.addEventListener('click', mediaImpares)
+
+
+// 1070 Seis Números Ímpares
+Leia um valor inteiro X. Em seguida apresente os 6 valores ímpares consecutivos 
+a partir de X, um valor por linha, inclusive o X ser for o caso.
+
+const mediaImpares = () => {
+    const valor = parseInt((document.querySelector('.num1').value).split(" "))
+    
+    let impares = 0;
+    for(let i = valor; i <= 20; i++){
+        
+        if(i % 2 != 0){
+            console.log(i)
+        }
+    }
+    
+}
+botao.addEventListener('click', mediaImpares)
+
+// 1071 Soma de Impares Consecutivos I
+Leia 2 valores inteiros X e Y. A seguir, calcule e mostre a soma dos números impares entre eles.
+
 */
+
+const somaImpares = () => {
+    const valor = (document.querySelector('.num1').value).split(" ")
+    const nums = valor.map(Number)
+    let x = nums[0]
+    let y = nums[1]
+    let min;
+    let max;
+    if(x > y){
+        min = y
+        max = x
+    }
+    else{
+        min = x
+        max = y
+    }
+
+    let somas = 0;
+    for(let i = min +1; i < max; i++){
+        if(i % 2 != 0){
+            console.log(i)
+            somas += i
+            console.log('soma: ' + somas)
+        }
+    }
+    res.innerHTML = `${somas}`
+}
+botao.addEventListener('click', somaImpares)
