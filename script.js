@@ -787,8 +787,6 @@ botao.addEventListener('click', mediaImpares)
 // 1071 Soma de Impares Consecutivos I
 Leia 2 valores inteiros X e Y. A seguir, calcule e mostre a soma dos números impares entre eles.
 
-*/
-
 const somaImpares = () => {
     const valor = (document.querySelector('.num1').value).split(" ")
     const nums = valor.map(Number)
@@ -816,3 +814,43 @@ const somaImpares = () => {
     res.innerHTML = `${somas}`
 }
 botao.addEventListener('click', somaImpares)
+
+// 1072 Intervalo 2
+
+Leia um valor inteiro N. Este valor será a quantidade de valores inteiros X que serão lidos em seguida.
+Mostre quantos destes valores X estão dentro do intervalo [10,20] e quantos estão fora do intervalo,
+mostrando essas informações.
+
+
+const intervalo = () => {
+    const valor = (document.querySelector('.num1').value).split(" ")
+    const nums = valor.map(Number)
+    let dentro = 0;
+    let fora = 0;
+
+    for (let i = 1; i <= nums[0]; i++){
+
+        if(nums[i] > 9 && nums[i] < 21){
+            dentro++
+        }else{
+            fora++
+        }
+    }
+
+    res.innerHTML = `${dentro} in <br/> ${fora} out`
+
+
+}
+
+botao.addEventListener('click', intervalo);
+
+// 1073 Quadrado de Pares
+
+Leia um valor inteiro N. Apresente o quadrado de cada um dos valores pares, 
+de 1 até N, inclusive N, se for o caso.
+
+*/
+
+const quadrado = () => {
+    const valor = parseInt((document.querySelector('.num1').value))
+}
