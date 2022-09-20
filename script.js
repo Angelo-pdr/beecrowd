@@ -849,8 +849,71 @@ botao.addEventListener('click', intervalo);
 Leia um valor inteiro N. Apresente o quadrado de cada um dos valores pares, 
 de 1 até N, inclusive N, se for o caso.
 
-*/
-
 const quadrado = () => {
-    const valor = parseInt((document.querySelector('.num1').value))
+    const valor = (document.querySelector('.num1').value).split(" ")
+    const nums = valor.map(Number)
+    let pares = 0;
+    let impares = 0
+    let positivos = 0
+    let negativos = 0 
+    console.log(nums)
+    for(let i = 1; i <= nums[0]; i++){
+        if(nums[i] == 0){
+            res.innerHTML += `NULL<br>` 
+        }
+        else if(nums[i] > 0){
+            if(nums[i] % 2 == 0){
+                res.innerHTML += `EVEN POSITIVE<br>` 
+            }
+            else{
+                res.innerHTML += `ODD POSITIVE<br>` 
+            }
+        }
+        else{
+            if(nums[i] % 2 == 0){
+                res.innerHTML += `EVEN NEGATIVE<br>` 
+            }
+            else{
+                res.innerHTML += `ODD NEGATIVE<br>` 
+            }
+        }
+    }
+   
 }
+
+botao.addEventListener('click', quadrado);
+
+//1075 Resto 2
+
+Leia um valor inteiro N. Apresente todos os números entre 1 e 10000 
+que divididos por N dão resto igual a 2.
+
+const resto2 = () => {
+    const valor = parseInt(document.querySelector('.num1').value)
+
+    for(let i = 0; i <= 1000; i++){
+        if(i % 13 == 2){
+            console.log(i)
+        }
+    }
+
+}
+botao.addEventListener('click', resto2);
+
+// 1078 Tabuada
+Leia 1 valor inteiro N (2 < N < 1000). A seguir, mostre a tabuada de N:      
+1 x N = N      2 x N = 2N        ...       10 x N = 10N
+
+
+function tabuada (){
+    const valor = parseInt(document.querySelector('.num1').value)
+    
+    for(let i = 0; i <= 10; i++){
+       const res = i * valor
+        console.log(`${i} x ${valor} = ${res}`)
+        
+    }
+
+}
+botao.addEventListener('click', tabuada);
+*/
